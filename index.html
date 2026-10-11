@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="PRIMEREO — Precision in Reinforcement. 2D Rebar Scheduling, 3D Rebar Modelling, Prefab Shop Drawings and remote reinforcement detailing."
+    >
+
+    <title>PRIMEREO | Precision in Reinforcement</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- THIẾT LẬP RIÊNG CHO ẢNH HERO -->
+    <style>
+        #primereo-hero {
+            grid-template-columns:
+                minmax(0, 1.02fr)
+                minmax(0, 0.98fr);
+        }
+
+        #primereo-hero .hero-copy,
+        #primereo-hero .hero-visual {
+            min-width: 0;
+        }
+
+        /* Chỉnh chiều rộng và chiều cao hero tại đây */
+        #hero-model-frame {
+            width: 150% !important;
+            max-width: none !important;
+            height: 500px !important;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Ảnh phủ kín khung, giữ đúng tỷ lệ */
+        #hero-rebar {
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+
+            object-fit: cover !important;
+            object-position: left center !important;
+        }
+
+        /* Thông tin bên dưới ảnh */
+        #primereo-hero .frame-meta {
+            position: static;
+            padding: 12px 0;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* Điện thoại và màn hình nhỏ */
+        @media (max-width: 850px) {
+            #primereo-hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            #hero-model-frame {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: 380px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-bg"></div>
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <a class="brand" href="index.html">
+            PRIMEREO
+        </a>
+
+        <nav>
+            <a href="#work">Projects</a>
+            <a href="#capabilities">Capabilities</a>
+            <a href="#process">Process</a>
+            <a href="#software">Software</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="nav-cta" href="#contact">
+            Let's work
+        </a>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="primereo-hero" class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">
+                    <span></span>
+                    REMOTE / FREELANCE REBAR DETAILING
+                </p>
+
+                <h1>
+                    PRIME<br>
+                    <em>REO</em>
+                </h1>
+
+                <p class="hero-sub">
+                    Precision in Reinforcement.
+                </p>
+
+                <p class="hero-text">
+                    Specialist reinforcement services covering 2D rebar
+                    scheduling, 3D rebar modelling and prefab shop drawings,
+                    with a focus on accuracy and practical delivery.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn primary" href="#work">
+                        View our work <span>↗</span>
+                    </a>
+
+                    <a class="btn secondary" href="#contact">
+                        Let's work together
+                    </a>
+                </div>
+            </div>
+
+            <!-- HERO VISUAL -->
+            <div class="hero-visual">
+                <div id="hero-model-frame" class="model-frame">
+                    <img
+                        id="hero-rebar"
+                        class="hero-image"
+                        src="images/hero-rebar.png"
+                        alt="PRIMEREO 3D reinforcement model"
+                    >
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="work" class="section">
+            <div class="section-head">
+                <div>
+                    <h2>PROJECTS</h2>
+                </div>
+
+                <p class="section-note">
+                    A growing selection of reinforcement scheduling,
+                    3D modelling and prefab shop drawing work.
+                </p>
+            </div>
+
+            <div class="project-grid">
+                <!-- PROJECT 01 -->
+                <a
+                    class="project-card featured"
+                    href="projects/project-01.html"
+                >
+                    <div class="project-image">
+                        <img
+                            src="images/project-01.jpg"
+                            alt="Beam & Slab Reinforcement"
+                        >
+
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="number">01</span>
+                            <span class="tag">SLAB / BUILDING</span>
+                        </div>
+
+                        <h3>
+                            Beam &amp;<br>
+                             Slab Reinforcement
+                        </h3>
+
+                        <p>
+                            3D rebar modelling · Shop drawings ·
+                            Bar bending schedules
+                        </p>
+
+                        <span class="project-link">
+                            View case study ↗
+                        </span>
+                    </div>
+                </a>
+
+                <!-- PROJECT 02 -->
+                <a
+                    class="project-card featured"
+                    href="projects/project-02.html"
+                >
+                    <div class="project-image">
+                        <img
+                            src="images/project-02.jpg"
+                            alt="Diaphragm and Span Deck reinforcement model"
+                        >
+
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="number">02</span>
+                            <span class="tag">BRIDGE / CIVIL</span>
+                        </div>
+
+                        <h3>
+                            Diaphragm &amp;<br>
+                            Span Deck
+                        </h3>
+
+                        <p>
+                            3D rebar modelling · Shop drawings ·
+                            Bar bending schedules
+                        </p>
+
+                        <span class="project-link">
+                            View case study ↗
+                        </span>
+                    </div>
+                </a>
+<!-- PROJECT 03 -->
+                <a
+                    class="project-card featured"
+                    href="projects/project-03.html"
+                >
+                    <div class="project-image">
+                        <img
+                            src="images/project-03.jpg"
+                            alt="Distinctive Circular Slab"
+                        >
+
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="number">03</span>
+                            <span class="tag">SLAB / BUILDING</span>
+                        </div>
+
+                        <h3>
+                            Distinctive Circular<br>
+                            Slab
+                        </h3>
+
+                        <p>
+                            3D rebar modelling · Shop drawings ·
+                            Bar bending schedules
+                        </p>
+
+                        <span class="project-link">
+                            View case study ↗
+                        </span>
+                    </div>
+                </a>
+<!-- PROJECT 04 -->
+                <a
+                    class="project-card featured"
+                    href="projects/project-04.html"
+                >
+                    <div class="project-image">
+                        <img
+                            src="images/project-04.jpg"
+                            alt="REINFORCED CONCRETE PIT"
+                        >
+
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="number">04</span>
+                            <span class="tag">PIT / CIVIL</span>
+                        </div>
+
+                        <h3>
+                            REINFORCED CONCRETE<br>
+                            PIT
+                        </h3>
+
+                        <p>
+                            3D rebar modelling · Shop drawings ·
+                            Bar bending schedules
+                        </p>
+
+                        <span class="project-link">
+                            View case study ↗
+                        </span>
+                    </div>
+                </a>
+       <!-- PROJECT 05 -->
+                <a
+                    class="project-card featured"
+                    href="projects/project-05.html"
+                >
+                    <div class="project-image">
+                        <img
+                            src="images/project-05.jpg"
+                            alt="PIT"
+                        >
+
+
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <span class="number">04</span>
+                            <span class="tag">COLUMN - PREFAB CAGE / BUILDING</span>
+                        </div>
+
+                        <h3>
+                            Column<br>
+                            Prefab Cage
+                        </h3>
+
+                        <p>
+                            3D rebar modelling · Shop drawings ·
+                            Bar bending schedules
+                        </p>
+
+                        <span class="project-link">
+                            View case study ↗
+                        </span>
+                    </div>
+                </a>
+
+                        </section>
+
+        <!-- CAPABILITIES -->
+        <section id="capabilities" class="section capabilities">
+            <div class="section-head">
+                <div>
+                    <h2>CAPABILITIES</h2>
+                </div>
+
+                <p class="section-note">
+                    Practical reinforcement services across 2D, 3D
+                    and prefab documentation.
+                </p>
+            </div>
+
+            <div class="cap-grid">
+                <article>
+                    <span>01</span>
+                    <h3>2D REBAR SCHEDULING</h3>
+
+                    <p>
+                        Prepared in Bluebeam Revu with accuracy
+                        and consistency.
+                    </p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>3D REBAR MODELLING</h3>
+
+                    <p>
+                        Developed in Revit and coordinated
+                        through Navisworks.
+                    </p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>PREFAB SHOP DRAWINGS</h3>
+
+                    <p>
+                        Produced in AutoCAD and Revit with clear
+                        fabrication details.
+                    </p>
+                </article>
+
+                <article>
+                    <span>04</span>
+                    <h3>FLEXIBLE WORKING HOURS</h3>
+
+                    <p>
+                        Adaptable availability to meet project deadlines
+                        and client requirements.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- WORKFLOW -->
+        <section id="process" class="section process">
+            <div class="section-head">
+                <div>
+                    <h2>WORKFLOW</h2>
+                </div>
+
+                <p class="section-note">
+                    A structured workflow designed to identify issues early,
+                    clarify requirements and deliver reliable
+                    reinforcement documentation.
+                </p>
+            </div>
+
+            <div class="process-list">
+                <div>
+                    <span>01</span>
+                    <h3>REVIEW</h3>
+
+                    <p>
+                        Review design documentation, drawings
+                        and project requirements.
+                    </p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <h3>RFI</h3>
+
+                    <p>
+                        Raise and resolve queries with site teams
+                        and engineers before proceeding.
+                    </p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <h3>PRODUCTION</h3>
+
+                    <p>
+                        Develop the required 2D schedules, 3D models
+                        and reinforcement documentation.
+                    </p>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <h3>QA/QC</h3>
+
+                    <p>
+                        Thoroughly check dimensions, reinforcement,
+                        bar marks and project requirements.
+                    </p>
+                </div>
+
+                <div>
+                    <span>05</span>
+                    <h3>ISSUE</h3>
+
+                    <p>
+                        Deliver clear, accurate and construction-ready
+                        deliverables.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOFTWARE -->
+        <section id="software" class="section software">
+            <div class="software-copy">
+                <h2>SOFTWARE</h2>
+            </div>
+
+            <div class="software-list">
+                <div>
+                    <b>REVIT</b>
+                    <span>3D Rebar Modelling · Shop Drawings</span>
+                </div>
+
+                <div>
+                    <b>AUTOCAD</b>
+                    <span>Prefab Shop Drawings · Drafting</span>
+                </div>
+
+                <div>
+                    <b>NAVISWORKS</b>
+                    <span>Model Review · Coordination</span>
+                </div>
+
+                <div>
+                    <b>BLUEBEAM REVU</b>
+                    <span>2D Rebar Scheduling</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- REMOTE / FREELANCE -->
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>
+                        REMOTE /<br>
+                        FREELANCE REBAR DETAILING
+                    </h2>
+                </div>
+
+                <p class="section-note">
+                    Supporting worldwide projects remotely with flexible
+                    working arrangements and dedicated reinforcement
+                    detailing services.
+                </p>
+            </div>
+        </section>
+
+                <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div>
+                <h2>
+                    LET'S<br>
+                    <em>WORK.</em>
+                </h2>
+            </div>
+
+            <div class="contact-right">
+                <p>
+                    Send us your drawings
+                    We’ll bring them to life through precise reinforcement detailing
+                </p>
+
+                <a
+                    class="contact-email"
+                    href="primereo.team@gmail.com"
+                >
+                    primereo.team@gmail.com ↗
+                </a>
+
+                <div
+                    class="contact-links"
+                    style="flex-wrap: wrap; row-gap: 16px;"
+                >
+                    <!--
+                        Thay YOUR_WHATSAPP_NUMBER bằng số WhatsApp:
+                        Mã quốc gia + số điện thoại.
+                        Không có dấu +, khoảng trắng hoặc dấu gạch.
+                        Số Việt Nam: dùng 84 và bỏ số 0 đầu.
+                    -->
+                    <a
+                        href="https://wa.me/84869246617"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Contact PRIMEREO on WhatsApp"
+                    >
+                        WhatsApp ↗
+                    </a>
+
+                    <!--
+                        Thay toàn bộ href bên dưới bằng URL
+                        hồ sơ cá nhân hoặc trang công ty LinkedIn của bạn.
+                    -->
+                    <a
+                        href="https://www.linkedin.com/in/primereo/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View our LinkedIn profile"
+                    >
+                        LinkedIn ↗
+                    </a>
+
+                    <a href="#work">
+                        View Projects ↗
+                    </a>
+                </div>
+            </div>
+        </section>

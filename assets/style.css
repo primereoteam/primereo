@@ -1,0 +1,1000 @@
+/* ========================================
+   MÀU SẮC VÀ THÔNG SỐ CHUNG
+======================================== */
+
+:root {
+    --bg: #0d0e0f;
+    --panel: #151719;
+    --panel2: #1a1c1f;
+    --text: #f1f1ee;
+    --muted: #969a9d;
+    --line: #2a2d30;
+    --accent: #ff6b35;
+    --max: 1240px;
+}
+
+
+/* ========================================
+   THIẾT LẬP CƠ BẢN
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.55;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.grid-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.28;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 64px 64px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 75%
+    );
+
+    z-index: -1;
+}
+
+
+/* ========================================
+   THANH ĐIỀU HƯỚNG
+======================================== */
+
+.nav {
+    height: 82px;
+    max-width: var(--max);
+    margin: auto;
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    font: 700 19px "Space Grotesk";
+    letter-spacing: 0.06em;
+}
+
+.nav nav {
+    display: flex;
+    gap: 32px;
+}
+
+.nav nav a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #b9bcbe;
+}
+
+.nav nav a:hover,
+.contact-links a:hover {
+    color: var(--accent);
+}
+
+.nav-cta {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    border: 1px solid var(--line);
+    padding: 10px 14px;
+}
+
+.nav-cta:hover {
+    border-color: var(--accent);
+}
+
+
+/* ========================================
+   KHUNG NỘI DUNG VÀ TIÊU ĐỀ
+======================================== */
+
+.hero,
+.section,
+.contact {
+    max-width: var(--max);
+    margin: auto;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    line-height: 0.98;
+}
+
+h1 {
+    font-size: clamp(56px, 7.4vw, 112px);
+    letter-spacing: -0.055em;
+}
+
+h1 em,
+h2 em {
+    font-style: normal;
+    color: var(--accent);
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.eyebrow span {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+
+    background: var(--accent);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+/* ========================================
+   HERO — PHẦN ĐẦU TRANG
+======================================== */
+
+.hero {
+    min-height: 720px;
+
+    display: grid;
+    grid-template-columns: 1.02fr 0.98fr;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.hero-sub {
+    font: 600 15px "Space Grotesk";
+    margin: 28px 0 12px;
+}
+
+.hero-sub b {
+    color: var(--accent);
+    padding: 0 7px;
+}
+
+.hero-text {
+    max-width: 570px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+}
+
+
+/* ========================================
+   NÚT BẤM
+======================================== */
+
+.btn {
+    padding: 14px 18px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #111;
+}
+
+.btn.primary span {
+    margin-left: 18px;
+}
+
+.btn.secondary {
+    border: 1px solid var(--line);
+}
+
+
+/* ========================================
+   KHUNG MODEL
+======================================== */
+
+.model-frame {
+    height: 500px;
+    border: 1px solid var(--line);
+
+    background: linear-gradient(
+        145deg,
+        #181a1c,
+        #0b0c0d
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-label {
+    position: absolute;
+    left: 18px;
+    top: 16px;
+
+    font-size: 9px;
+    letter-spacing: 0.17em;
+    color: var(--muted);
+
+    z-index: 3;
+}
+
+.frame-meta {
+    position: absolute;
+    bottom: 16px;
+    left: 18px;
+    right: 18px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 9px;
+    letter-spacing: 0.13em;
+    color: var(--muted);
+
+    z-index: 3;
+}
+
+
+/* ========================================
+   MODEL MINH HOẠ BẰNG CSS
+======================================== */
+
+.fake-model {
+    position: absolute;
+    inset: 70px 35px 60px;
+
+    transform:
+        perspective(900px)
+        rotateX(55deg)
+        rotateZ(-28deg);
+
+    transform-style: preserve-3d;
+}
+
+.beam {
+    position: absolute;
+    width: 82%;
+    height: 82px;
+
+    border: 2px solid #777b7e;
+    background: rgba(70, 74, 77, 0.18);
+
+    left: 9%;
+    top: 30%;
+
+    transform: translateZ(-35px);
+}
+
+.beam-b {
+    top: 54%;
+    height: 55px;
+}
+
+.bar {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+
+    background: var(--accent);
+    left: 0;
+
+    box-shadow: 0 0 12px rgba(255, 107, 53, 0.15);
+}
+
+.bar-1 {
+    top: 21%;
+}
+
+.bar-2 {
+    top: 34%;
+}
+
+.bar-3 {
+    top: 47%;
+}
+
+.bar-4 {
+    top: 60%;
+}
+
+.bar-5 {
+    top: 73%;
+}
+
+.lig {
+    position: absolute;
+    width: 25px;
+    height: 110px;
+
+    border: 2px solid #b8bbbd;
+    top: 27%;
+}
+
+.lig-1 {
+    left: 25%;
+}
+
+.lig-2 {
+    left: 50%;
+}
+
+.lig-3 {
+    left: 75%;
+}
+
+.node {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+
+    border: 2px solid var(--accent);
+
+    left: 48%;
+    top: 46%;
+
+    box-shadow: 0 0 18px rgba(255, 107, 53, 0.5);
+}
+
+
+/* ========================================
+   CÁC SECTION
+======================================== */
+
+.section {
+    padding-top: 120px;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    border-bottom: 1px solid var(--line);
+
+    padding-bottom: 24px;
+    margin-bottom: 38px;
+}
+
+.section-head h2,
+.software h2 {
+    font-size: clamp(42px, 6vw, 74px);
+    letter-spacing: -0.05em;
+}
+
+.section-note {
+    max-width: 370px;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* ========================================
+   DỰ ÁN
+======================================== */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+
+.project-card {
+    background: var(--panel);
+    min-height: 490px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.25s ease;
+}
+
+.project-card:hover {
+    background: #1a1d20;
+    transform: translateY(-3px);
+}
+
+.project-card.featured {
+    grid-column: span 2;
+
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+
+    min-height: 540px;
+}
+
+.project-image {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.featured .project-image {
+    min-height: 540px;
+    border-bottom: 0;
+    border-right: 1px solid var(--line);
+}
+
+
+/* ========================================
+   HÌNH GIỮ CHỖ CHO DỰ ÁN
+======================================== */
+
+.placeholder {
+    background-color: #181a1c;
+
+    background-image:
+        linear-gradient(
+            30deg,
+            transparent 48%,
+            rgba(255, 255, 255, 0.05) 49%,
+            rgba(255, 255, 255, 0.05) 51%,
+            transparent 52%
+        ),
+        linear-gradient(
+            150deg,
+            transparent 48%,
+            rgba(255, 107, 53, 0.08) 49%,
+            rgba(255, 107, 53, 0.08) 51%,
+            transparent 52%
+        );
+
+    background-size: 70px 70px;
+}
+
+.placeholder:after {
+    content: "";
+
+    position: absolute;
+    inset: 15%;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    transform: skew(-10deg);
+}
+
+.placeholder span {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+
+    z-index: 2;
+}
+
+.placeholder b {
+    position: absolute;
+    right: 20px;
+    bottom: 17px;
+
+    font: 600 12px "Space Grotesk";
+    letter-spacing: 0.12em;
+    color: var(--accent);
+
+    z-index: 2;
+}
+
+
+/* ========================================
+   THÔNG TIN DỰ ÁN
+======================================== */
+
+.project-info {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.project-info > div {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.number {
+    font-size: 11px;
+    color: var(--accent);
+}
+
+.tag {
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+}
+
+.project-info h3 {
+    font-size: 38px;
+    letter-spacing: -0.04em;
+    margin: 24px 0 10px;
+}
+
+.project-info p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+.project-link {
+    margin-top: auto;
+    padding-top: 30px;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+}
+
+
+/* ========================================
+   CAPABILITIES — NĂNG LỰC
+======================================== */
+
+.capabilities {
+    background: linear-gradient(
+        180deg,
+        transparent,
+        #111315 20%,
+        #111315 80%,
+        transparent
+    );
+}
+
+.cap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--line);
+}
+
+.cap-grid article {
+    padding: 28px 22px 34px;
+    border-right: 1px solid var(--line);
+    min-height: 250px;
+}
+
+.cap-grid article:first-child {
+    border-left: 1px solid var(--line);
+}
+
+.cap-grid article > span,
+.process-list > div > span {
+    font-size: 10px;
+    color: var(--accent);
+}
+
+.cap-grid h3 {
+    font-size: 17px;
+    margin: 45px 0 15px;
+}
+
+.cap-grid p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+
+/* ========================================
+   PROCESS — QUY TRÌNH
+======================================== */
+
+.process-list {
+    border-top: 1px solid var(--line);
+}
+
+.process-list > div {
+    display: grid;
+    grid-template-columns: 70px 1fr 1.5fr;
+    align-items: center;
+
+    min-height: 100px;
+    border-bottom: 1px solid var(--line);
+}
+
+.process-list h3 {
+    font-size: 18px;
+}
+
+.process-list p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+}
+
+
+/* ========================================
+   SOFTWARE — PHẦN MỀM
+======================================== */
+
+.software {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.software-list > div {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.software-list b {
+    font: 600 18px "Space Grotesk";
+}
+
+.software-list span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+
+/* ========================================
+   CONTACT — LIÊN HỆ
+======================================== */
+
+.contact {
+    margin-top: 120px;
+    margin-bottom: 80px;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    border-top: 1px solid var(--line);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact h2 {
+    font-size: clamp(58px, 7vw, 94px);
+    letter-spacing: -0.06em;
+}
+
+.contact-right {
+    padding-top: 15px;
+}
+
+.contact-right > p {
+    max-width: 450px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.contact-email {
+    display: inline-block;
+
+    font: 600 22px "Space Grotesk";
+    margin: 32px 0;
+
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 7px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 28px;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+}
+
+
+/* ========================================
+   FOOTER — CHÂN TRANG
+======================================== */
+
+footer {
+    border-top: 1px solid var(--line);
+
+    max-width: var(--max);
+    margin: auto;
+    padding: 25px 28px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #666a6d;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+}
+
+
+/* ========================================
+   RESPONSIVE — MÀN HÌNH ≤ 850 PX
+======================================== */
+
+@media (max-width: 850px) {
+    .nav nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+        min-height: auto;
+    }
+
+    .model-frame {
+        height: 380px;
+    }
+
+    .project-card.featured {
+        grid-template-columns: 1fr;
+    }
+
+    .featured .project-image {
+        min-height: 350px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cap-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-list > div {
+        grid-template-columns: 45px 1fr;
+        gap: 10px;
+        padding: 20px 0;
+    }
+
+    .process-list p {
+        grid-column: 2;
+    }
+
+    .software,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-top: 85px;
+    }
+
+    .contact {
+        margin-top: 80px;
+    }
+
+    .nav {
+        padding: 0 18px;
+    }
+
+    .hero,
+    .section,
+    .contact {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE — MÀN HÌNH ≤ 520 PX
+======================================== */
+
+@media (max-width: 520px) {
+    .cap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cap-grid article {
+        border-left: 1px solid var(--line);
+    }
+
+    .project-info h3 {
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 20px 18px;
+        display: block;
+    }
+
+    footer span {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ========================================
+   ẢNH VÀ BỐ CỤC RESPONSIVE
+======================================== */
+
+/* Cho phép các ô nội dung co theo màn hình */
+.hero-copy,
+.hero-visual,
+.project-card,
+.project-image {
+    min-width: 0;
+}
+
+/* Khung hero rộng thêm 50%, cao 500px */
+.hero-visual .model-frame {
+    width: 150% !important;
+    max-width: none !important;
+    height: 500px !important;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ảnh hero phủ kín khung */
+.hero-visual .hero-image {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: left center !important;
+}
+
+/* Giữ thiết lập ảnh của các project */
+.project-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Thông tin nằm bên dưới ảnh hero */
+.hero-visual .frame-meta {
+    position: static;
+    padding: 12px 0;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   MÀN HÌNH ≤ 850 PX
+======================================== */
+
+@media (max-width: 850px) {
+    .hero,
+    .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Giữ khung hero vừa màn hình điện thoại */
+    .hero-visual .model-frame {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 380px !important;
+    }
+
+    .project-card.featured {
+        grid-column: 1 / -1;
+    }
+}
+/* CONTACT: làm nổi bật WhatsApp và LinkedIn */
+#contact .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+/* Cùng phong cách với địa chỉ email */
+#contact .contact-links a[href*="wa.me"],
+#contact .contact-links a[href*="whatsapp.com"],
+#contact .contact-links a[href*="linkedin.com"] {
+    display: inline-block;
+    max-width: 100%;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--accent);
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-transform: none;
+    text-decoration: none;
+
+    color: var(--text);
+    overflow-wrap: anywhere;
+
+    transition: color 0.2s ease;
+}
+
+#contact .contact-links a[href*="wa.me"]:hover,
+#contact .contact-links a[href*="whatsapp.com"]:hover,
+#contact .contact-links a[href*="linkedin.com"]:hover {
+    color: var(--accent);
+}
+
+#contact .contact-links a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+}
+
+/* View Projects vẫn là liên kết phụ */
+#contact .contact-links a[href="#work"] {
+    margin-top: 8px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+#contact .contact-links a[href="#work"]:hover {
+    color: var(--accent);
+}
+
+/* Cho phép email dài xuống dòng trên màn hình nhỏ */
+#contact .contact-right {
+    min-width: 0;
+}
+
+#contact .contact-email {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
